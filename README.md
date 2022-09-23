@@ -1,4 +1,4 @@
-# Jarkom-Modul-1-ITA04-2022-
+# Jarkom-Modul-1-ITA04-2022
 Nama Anggota | NRP
 ------------------- | --------------		
 Nida'ul Faizah | 5027201064
