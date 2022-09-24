@@ -9,13 +9,29 @@ Najwa Amelia Qorry 'Aina | 5027201001
 Sebutkan web server yang digunakan pada "monta.if.its.ac.id"! 
 
 #### Jawab
+Pada soal nomer 1, kami menggunakan display filter: `http.host contains monta.if.its.ac.id`
 
+![Foto](./img/soal1_1.png)
+
+Kemudian pada HTTP kita lakukan TCP Stream dengan klik kanan Follow lalu pilih TCP Stream
+
+![Foto](./img/soal1_2.png)
+
+Maka terlihat bahwa web server yang digunakan pada monta.if.its.ac.id adalah: **`nginx/1.10.3`**
+
+![Foto](./img/soal1_3.png)
 
 ## Soal 2
 Ishaq sedang bingung mencari topik ta untuk semester ini , lalu ia datang ke website monta dan menemukan detail topik pada website “monta.if.its.ac.id” , judul TA apa yang dibuka oleh ishaq ?
 
 #### Jawab
+Pada soal nomer 2, untuk mengetahui judul TA yang dibuka oleh Ishaq kami menggunakan filter detail: `http.request.uri contains "detail"` sehingga didapat URL dari HTTP yang merujuk pada TA yang diakses. yaitu URLnya: http://monta.if.its.ac.id/index.php/topik/detailTopik/194
 
+![Foto](./img/soal2_1.PNG)
+
+Dengan mengakses URLnya, maka akan dialihkan ke web yang berisi TA yang dibuka Ishaq beserta judulnya: `Evaluasi unjuk kerja User Space Filesystem (FUSE)`
+
+![Foto](./img/soal2_2.PNG)
 
 ## Soal 3
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 80! 
