@@ -73,21 +73,50 @@ Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id!
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 
 #### Jawab
+Pertama dimulai dengan membuka command prompt kemudian mengetik `ipconfig` untuk mendapatkan ip address sendiri
 
+![Foto](./img/soal7_1.PNG)
+
+Kemudian kami memasukkan display filter `ip.src == 192.168.100.2`
+
+![Foto](./img/soal7_2.PNG)
 
 ## Soal 8
 Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna berupa percakapan antara dua mahasiswa terkait tindakan kecurangan pada kegiatan praktikum. Percakapan tersebut dilaporkan menggunakan protokol jaringan dengan tingkat keandalan yang tinggi dalam pertukaran datanya sehingga kalian perlu menerapkan filter dengan protokol yang tersebut.
 
 #### Jawab
 
+Protokol dengan ciri-ciri yang sudah disebutkan diatas adalah TCP sehingga kami hanya perlu memasukkan display filter `tcp`
+
+![Foto](./img/soal8_1.PNG)
+
+Kemudian pada HTTP kita lakukan TCP Stream dengan klik kanan Follow lalu pilih TCP Stream
+
+![Foto](./img/soal8_2.PNG)
+![Foto](./img/soal8_3.PNG)
+![Foto](./img/soal8_4.PNG)
+
 
 ## Soal 9
 Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format [nama_kelompok].des3 dan simpan output file dengan nama “flag.txt”.
 
 #### Jawab
+Berdasarkan ketiga percakapan diatas ditemukan bahwa mereka bertukar file melalui port 9002 maka kami memasukkan display filter `tcp.port==9002` 
 
+![Foto](./img/soal9_1.PNG)
+
+Kemudian lakukan TCP Stream dengan klik kanan Follow lalu pilih TCP Stream hingga menemukan frame yang mengandung kata salted
+
+![Foto](./img/soal9_2.PNG)
+
+Apabila sudah menemukan, save file as .des3 dan lakukan decrypt dengan berdasarkan percakapan diatas
+
+![Foto](./img/soal9_3.PNG)
+![Foto](./img/soal9_4.PNG)
 
 ## Soal 10
 Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di atas!
 
 #### Jawab
+
+Flag yang dimaksud adalah `JaRkOm2022{8uK4N_CtF_k0k_h3h3h3}`
