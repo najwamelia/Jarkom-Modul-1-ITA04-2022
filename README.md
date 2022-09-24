@@ -63,7 +63,7 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
 #### Jawab
 Pada nomer ini kita menggunakan cara yang sama seperti nomer 4, hanya saja kita perlu mengganti portnya menjadi 443. Filternya adalah `tcp.srcport == 443 || udp.srcport == 443` dan muncul sebanyak lebih dari 100 packet.
 
-![Foto](./img/soal5_1.png)
+![Foto](./img/soal5_1.PNG)
 
 ## Soal 6
 Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id!
@@ -71,11 +71,11 @@ Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id!
 #### Jawab
 Pada nomer ini kita diberikan sebuah URL yaitu lipi.go.id dan pertama-tama kita perlu mencari IPnya terlebih dahulu. Kita mengecek IPnya pada website IP checker online dan secara tidak sengaja URL yang diberikan memiliki IP yang sama seperti pada nomer 3 yaitu `203.160.128.158`.
 
-![Foto](./img/soal6_1.png)
+![Foto](./img/soal6_1.PNG)
 
 Sehingga kita dapat melakukan filter yang sama yaitu `ip.dst == 203.160.128.158` dan muncul sebanyak 25 packet.
 
-![Foto](./img/soal6_2.png)
+![Foto](./img/soal6_2.PNG)
 
 ## Soal 7
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
