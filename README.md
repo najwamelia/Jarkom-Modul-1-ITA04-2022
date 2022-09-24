@@ -37,13 +37,25 @@ Dengan mengakses URLnya, maka akan dialihkan ke web yang berisi TA yang dibuka I
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 80! 
 
 #### Jawab
+Menggunakan filter `tcp.port==80` dan muncul source port dan destination port 80, lalu kita filter yang hanya destination port 80 dan ternyata semua yang destination port 80 memiliki destination IP yang sama yaitu 203.160.128.158.
 
+![Foto](./img/soal3_1.PNG)
+
+Sehingga kita filter menggunakan `ip.dst==203.160.128.158 && tcp.port==80 || udp.port==80` dan muncul sebanyak 25 paket.
+
+![Foto](./img/soal3_2.PNG)
+
+Ternyata terdapat cara lain agar mendapat informasi packet yang lebih lengkap, yaitu dengan cara `tcp.dstport == 80 || udp.dstport==80` dan ternyata terdapat 1 paket yang terlewatkan apabila memakai cara yang pertama karena memiliki destination IP yang berbeda. Sehingga muncul lah sebanyak 26 paket total.
+
+![Foto](./img/soal3_3.PNG)
 
 ## Soal 4
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
 
 #### Jawab
+Menggunakan cara yang hampir sama seperti nomer 3 tetapi apabila pada nomer 3 kita menggunakan `tcp.dstport || udp.dstport`, pada nomer 4 ini kita ganti menjadi `tcp.srcport || udp.srcport` sehingga kita tulis pada filter `tcp.srcport == 21 || udp.srcport == 21` dan muncul sebanyak 73 paket.
 
+![Foto](./img/soal4_1.PNG)
 
 ## Soal 5
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
