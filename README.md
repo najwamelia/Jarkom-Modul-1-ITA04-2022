@@ -109,7 +109,7 @@ Kemudian lakukan TCP Stream dengan klik kanan Follow lalu pilih TCP Stream hingg
 
 ![Foto](./img/soal9_2.png)
 
-Apabila sudah menemukan, save file as .des3 dan lakukan decrypt dengan berdasarkan percakapan diatas
+Apabila sudah menemukan, save file as .des3 dan lakukan decrypt berdasarkan percakapan diatas
 
 ![Foto](./img/soal9_3.png)
 ![Foto](./img/soal9_4.png)
